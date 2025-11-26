@@ -1,0 +1,211 @@
+/* ============================= */
+/*        BASE COLOR PALETTE     */
+/* ============================= */
+:root {
+  --main-blue: #0d1b2a;
+  --secondary-blue: #1b263b;
+  --soft-blue: #2c3e5c;
+
+  --main-pink: #ff00a0;
+  --secondary-pink: #ff66b2;
+  --light-pink: #ff99cc;
+
+  --white: #f1f5f9;
+  --light-lila: #d7c6ff;
+  --dark-lila: #9b8fff;
+}
+
+/* ============================= */
+/*            RESET              */
+/* ============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  color: var(--white);
+}
+
+/* ============================= */
+/*            APP                */
+/* ============================= */
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--main-blue), var(--secondary-blue));
+}
+
+
+.App > div {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+/* ============================= */
+/*            LOGO               */
+/* ============================= */
+.logo {
+  width: 160px;
+  height: 120px; 
+  margin-bottom: 10px; 
+  filter: brightness(1.15) contrast(1.1);
+}
+
+/* ============================= */
+/*           HEADER H1           */
+/* ============================= */
+h1 {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 30px; 
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #38bdf8, #d946ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============================= */
+/*     TESTIMONIAL COMPONENT     */
+/* ============================= */
+.testimonial-container {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.12));
+  border-radius: 25px;
+  padding: 30px 25px;
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+  color: var(--white);
+  text-align: left;
+  margin: 0 auto 50px auto;
+}
+
+.testimonial-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 128, 255, 0.8);
+  flex-shrink: 0;
+  box-shadow: 0 0 15px 5px rgba(0, 128, 255, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+
+.testimonial-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--white);
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 1.55rem;
+  color: var(--main-pink);
+  margin-bottom: 0;
+}
+
+
+.testimonial-position {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--light-lila);
+  margin-bottom: 15px; 
+}
+
+
+.testimonial-company {
+  font-style: normal;
+  font-size: 1.1rem;
+  color: var(--dark-lila);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+
+.testimonial-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--white);
+  font-style: italic;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+.testimonial-text::before {
+  content: '“';
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 4px;
+  color: var(--main-pink);
+}
+
+.testimonial-text::after {
+  content: '”';
+  font-size: 1.5rem;
+  vertical-align: bottom;
+  margin-left: 4px;
+  color: var(--main-pink);
+}
+
+/* ============================= */
+/*           RESPONSIVE          */
+/* ============================= */
+@media (max-width: 768px) {
+  .App h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .testimonial-image {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-text-container {
+    gap: 4px;
+  }
+
+  .testimonial-name {
+    font-size: 1.35rem;
+  }
+
+  .testimonial-position {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+  }
+
+  .testimonial-company {
+    font-size: 1rem;
+  }
+
+  .testimonial-text::before,
+  .testimonial-text::after {
+    font-size: 1.3rem;
+  }
+}
